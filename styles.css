@@ -4,23 +4,28 @@
   --text: #111111;
   --text-muted: #6b6b6b;
   --text-faint: #9a9a9a;
-  --border: #e5e5e3;
+  --border: #d8d8d4;
   --link: #1a56db;
-  --max-width: 680px;
+  --max-width: 880px;
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+/* Base size lives on the root element only. Every other size below is
+   expressed in rem, so it scales proportionally off this one value. */
+html {
+  scroll-behavior: smooth;
+  font-size: 19px;
+}
 
 body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
   font-family: var(--font);
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -84,17 +89,17 @@ a:hover { text-decoration: underline; }
 }
 
 .hero img {
-  width: 108px;
-  height: 108px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 
 .hero h1 {
-  font-size: 1.85rem;
+  font-size: 2.2rem;
   font-weight: 700;
-  margin: 0 0 6px;
+  margin: 0 0 8px;
   letter-spacing: -0.01em;
 }
 
@@ -136,8 +141,8 @@ a:hover { text-decoration: underline; }
 /* ---------- Divider ---------- */
 hr {
   border: none;
-  border-top: 1px solid var(--border);
-  margin: 44px 0;
+  border-top: 2px solid var(--border);
+  margin: 52px 0;
 }
 
 /* ---------- Section ---------- */
@@ -259,6 +264,38 @@ button.paper-title:hover { color: var(--link); }
 }
 
 .contact-grid .value { font-size: 0.95rem; margin: 0; }
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  transition: all 0.15s ease;
+}
+
+.social-links a:hover {
+  border-color: var(--link);
+  color: var(--link);
+  text-decoration: none;
+}
+
+.social-links svg { width: 18px; height: 18px; fill: currentColor; }
 
 @media (max-width: 480px) {
   .contact-grid { grid-template-columns: 1fr; }
