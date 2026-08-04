@@ -22,11 +22,15 @@
 </nav>
 
 <header class="hero container" id="top">
-  <img src="https://github.com/ravi7234.png" alt="Ravi Ranjan" width="160" height="160">
+  <div class="hero-top">
+    <img src="https://github.com/ravi7234.png" alt="Ravi Ranjan" width="160" height="160">
 
-  <h1>Ravi Ranjan</h1>
-  <p class="role">Ph.D. Candidate in Finance<br>
-  <a href="https://www.kenan-flagler.unc.edu/" target="_blank" rel="noopener">UNC Kenan-Flagler Business School</a></p>
+    <div class="hero-heading">
+      <h1>Ravi Ranjan</h1>
+      <p class="role">Ph.D. Candidate in Finance<br>
+      <a href="https://www.kenan-flagler.unc.edu/" target="_blank" rel="noopener">UNC Kenan-Flagler Business School</a></p>
+    </div>
+  </div>
 
   <p>I am a Ph.D. Candidate in Finance at the University of North Carolina Kenan-Flagler Business School, Chapel Hill. I am in my fourth year of the Ph.D. curriculum. My work focuses on private capital and applications of machine learning in finance.</p>
 
@@ -42,19 +46,19 @@
   </div>
 
   <div class="paper">
-    <button class="paper-title" type="button" aria-expanded="false">Anomaly Premiums with Dynamic Exits</button>
+    <button class="paper-title" type="button" aria-expanded="false"><span class="paper-title-text">Anomaly Premiums with Dynamic Exits</span><span class="chevron" aria-hidden="true">&#8250;</span></button>
     <p class="paper-meta">with <a href="https://carey.jhu.edu/faculty/faculty-directory/nagpurnanand-prabhala" target="_blank" rel="noopener">Nagpurnanand Prabhala</a> &amp; <a href="https://sites.google.com/view/nitinkumar" target="_blank" rel="noopener">Nitin Kumar</a> &middot; <a class="ssrn-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6076808" target="_blank" rel="noopener">SSRN &#8599;</a></p>
     <p class="paper-abstract" hidden>Anomaly premiums are traditionally based on long-short portfolios held passively for a fixed horizon. We estimate premiums when exits are instead optimized using machine learning with a computationally light architecture. We use randomized kernels to generate high-dimensional representations of time-series inputs. A classifier ingests the inputs and predicts optimal exits. In a conservative universe with only large-cap value-weighted portfolios, dynamic exits generate premiums of about 100 basis points per month for momentum, profitability, and value. These premiums are not replicated with static or random exits, without random re-representations, in non-anomaly portfolios, and are robust to reasonable transaction cost hurdles.</p>
   </div>
 
   <div class="paper">
-    <button class="paper-title" type="button" aria-expanded="false">When Diversity Rules</button>
+    <button class="paper-title" type="button" aria-expanded="false"><span class="paper-title-text">When Diversity Rules</span><span class="chevron" aria-hidden="true">&#8250;</span></button>
     <p class="paper-meta">with Joseph Kalmenovitz, Abhinav Gupta &amp; Kairong Xiao &middot; <a class="ssrn-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5389250" target="_blank" rel="noopener">SSRN &#8599;</a></p>
     <p class="paper-abstract" hidden>Can gender diversity influence regulatory outcomes? We explore this question in the context of U.S. federal rulemaking, leveraging a novel dataset that tracks 15,000 rulemakers responsible for drafting and advancing 38,000 regulatory projects. We find that teams including women deliberate longer and extensively revise their initial drafts, yet are ultimately less likely to see their projects approved by the agency leadership and issued as final rules. To explain these patterns, we develop a simple model of rulemaking in which output gaps arise from four sources: selection (women are assigned lower-quality projects), cost (differences in the cost of exerting effort), incentive (differences in the return to effort), and evaluation (differential treatment by agency leadership). Reduced-form estimates, aided by a machine-learning C-BERT model, reveal that women are assigned to lower-quality projects and face harsher evaluations, but receive stronger incentives tied to project completion. Structural estimates confirm that disadvantages in selection, cost, and evaluation each contribute meaningfully to the observed gender gap, partially offset by females receiving stronger incentives. Our findings shed light on how female representation shapes regulatory performance and contribute to the broader debate over whether diversity enhances or hinders the effectiveness of public institutions.</p>
   </div>
 
   <div class="paper">
-    <button class="paper-title" type="button" aria-expanded="false">Embedding Venture Capital: A Machine Learning Approach to VC Risk Exposures</button>
+    <p class="paper-title paper-title-static">Embedding Venture Capital: A Machine Learning Approach to VC Risk Exposures</p>
     <p class="paper-meta">Job Market Paper</p>
   </div>
 </section>
@@ -75,26 +79,11 @@
     <h2>Contact</h2>
   </div>
 
-  <div class="contact-row">
-    <div class="contact-email">
-      <p class="label">Email</p>
-      <p class="value"><a href="mailto:ravi_ranjan@kenan-flagler.unc.edu">ravi_ranjan@kenan-flagler.unc.edu</a></p>
-    </div>
-
-    <div class="social-links">
-      <a href="mailto:ravi_ranjan@kenan-flagler.unc.edu" aria-label="Email" title="Email">
-        <svg viewBox="0 0 24 24"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.2.3 7.8 6.1 7.8-6.1H4.2ZM20 7.4l-7.6 5.9a1 1 0 0 1-1.2 0L4 7.4v11.1c0 .3.2.5.5.5h15c.3 0 .5-.2.5-.5V7.4Z"/></svg>
-      </a>
-      <a href="https://www.linkedin.com/in/ravi7234/" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM2.5 9.75h5V21h-5V9.75Zm7.6 0h4.79v1.54h.07c.67-1.2 2.3-2.47 4.73-2.47 5.06 0 6 3.13 6 7.2V21h-5v-6.02c0-1.44-.03-3.28-2.1-3.28-2.1 0-2.42 1.55-2.42 3.18V21h-5V9.75Z"/></svg>
-      </a>
-      <a href="https://github.com/ravi7234" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
-      </a>
-      <a href="https://papers.ssrn.com/Sol3/Cf_Dev/AbsByAuth.cfm?per_id=6406780" aria-label="SSRN" title="SSRN Author Page" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><text x="12" y="16" font-size="9" font-weight="700" text-anchor="middle" font-family="sans-serif">SSRN</text></svg>
-      </a>
-    </div>
+  <div class="links-row">
+    <a href="mailto:ravi_ranjan@kenan-flagler.unc.edu">Email</a>
+    <a href="https://www.linkedin.com/in/ravi7234/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/ravi7234" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://papers.ssrn.com/Sol3/Cf_Dev/AbsByAuth.cfm?per_id=6406780" target="_blank" rel="noopener">SSRN</a>
   </div>
 </section>
 

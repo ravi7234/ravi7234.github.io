@@ -85,7 +85,18 @@ a:hover { text-decoration: underline; }
 
 /* ---------- Hero ---------- */
 .hero {
-  padding: 56px 0 8px;
+  /* only override top/bottom padding here -- left/right must stay
+     inherited from .container, or the hero text loses its 24px side
+     padding and drifts out of alignment with every section below it */
+  padding-top: 56px;
+  padding-bottom: 8px;
+}
+
+.hero-top {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 28px;
 }
 
 .hero img {
@@ -93,8 +104,10 @@ a:hover { text-decoration: underline; }
   height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 24px;
+  flex: 0 0 auto;
 }
+
+.hero-heading { min-width: 0; }
 
 .hero h1 {
   font-size: 2.2rem;
@@ -106,7 +119,7 @@ a:hover { text-decoration: underline; }
 .hero .role {
   color: var(--text-muted);
   font-size: 1rem;
-  margin: 0 0 26px;
+  margin: 0;
 }
 
 .hero .role a { color: var(--text-muted); text-decoration: underline; text-decoration-color: var(--border); }
@@ -181,29 +194,34 @@ hr {
   line-height: 1.4;
 }
 
-/* click-to-expand paper title */
+/* click-to-expand paper title: text flush-left, chevron trails so
+   the title text lines up with headings and body copy above it. */
 button.paper-title {
-  display: flex;
+  display: inline-flex;
   align-items: baseline;
-  gap: 8px;
+  justify-content: flex-start;
+  gap: 6px;
   background: none;
   border: none;
   padding: 0;
+  margin: 0 0 4px;
   color: var(--text);
-  font-family: inherit;
+  font: inherit;
+  font-weight: 600;
   cursor: pointer;
   text-align: left;
+  width: 100%;
 }
 
-button.paper-title::before {
-  content: "\203A";
+button.paper-title .chevron {
   display: inline-block;
   color: var(--text-faint);
+  font-weight: 400;
   transition: transform 0.15s ease;
   flex: 0 0 auto;
 }
 
-button.paper-title[aria-expanded="true"]::before {
+button.paper-title[aria-expanded="true"] .chevron {
   transform: rotate(90deg);
 }
 
@@ -247,59 +265,9 @@ button.paper-title:hover { color: var(--link); }
   font-size: 0.94rem;
 }
 
-/* ---------- Contact ---------- */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  max-width: 480px;
-}
-
-.contact-grid .label {
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--text-faint);
-  margin: 0 0 4px;
-}
-
-.contact-grid .value { font-size: 0.95rem; margin: 0; }
-
-.contact-row {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  flex-wrap: wrap;
-}
-
-.social-links {
-  display: flex;
-  gap: 12px;
-}
-
-.social-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid var(--border);
-  color: var(--text-muted);
-  transition: all 0.15s ease;
-}
-
-.social-links a:hover {
-  border-color: var(--link);
-  color: var(--link);
-  text-decoration: none;
-}
-
-.social-links svg { width: 18px; height: 18px; fill: currentColor; }
-
 @media (max-width: 480px) {
-  .contact-grid { grid-template-columns: 1fr; }
   .nav-links { gap: 14px; }
+  .hero-top { flex-direction: column; align-items: flex-start; gap: 16px; }
 }
 
 /* ---------- Footer ---------- */
