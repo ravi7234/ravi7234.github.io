@@ -5,7 +5,8 @@
   --text-muted: #6b6b6b;
   --text-faint: #9a9a9a;
   --border: #d8d8d4;
-  --link: #1a56db;
+  --link: #4b9cd3; /* UNC Carolina Blue */
+  --navy: #13294b; /* UNC Navy */
   --max-width: 880px;
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
@@ -62,7 +63,7 @@ a:hover { text-decoration: underline; }
 .brand {
   font-weight: 700;
   font-size: 0.98rem;
-  color: var(--text);
+  color: var(--navy);
 }
 
 .brand:hover { text-decoration: none; opacity: 0.75; }
@@ -114,6 +115,7 @@ a:hover { text-decoration: underline; }
   font-weight: 700;
   margin: 0 0 8px;
   letter-spacing: -0.01em;
+  color: var(--navy);
 }
 
 .hero .role {
@@ -172,11 +174,51 @@ hr {
   font-size: 1.15rem;
   font-weight: 700;
   margin: 0;
+  color: var(--navy);
 }
 
 .section-head .count {
   color: var(--text-faint);
   font-size: 0.85rem;
+}
+
+/* ---------- Research agenda ---------- */
+.research-agenda {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.6;
+  max-width: 66ch;
+  margin: 0 0 32px;
+}
+
+/* ---------- Job Market Paper callout ---------- */
+.jmp-card {
+  border-left: 3px solid var(--link);
+  background: rgba(75, 156, 211, 0.08);
+  border-radius: 0 8px 8px 0;
+  padding: 18px 22px;
+  margin-bottom: 32px;
+}
+
+.jmp-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--link);
+  border-radius: 999px;
+  padding: 3px 10px;
+  margin-bottom: 10px;
+}
+
+.jmp-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+  color: var(--navy);
 }
 
 /* ---------- Paper list ---------- */
@@ -198,14 +240,15 @@ hr {
    the title text lines up with headings and body copy above it. */
 button.paper-title {
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: flex-start;
-  gap: 6px;
+  gap: 8px;
+  flex-wrap: wrap;
   background: none;
   border: none;
   padding: 0;
   margin: 0 0 4px;
-  color: var(--text);
+  color: var(--navy);
   font: inherit;
   font-weight: 600;
   cursor: pointer;
@@ -229,6 +272,19 @@ button.paper-title:hover { color: var(--link); }
 
 .paper-title-static { cursor: default; }
 
+.status-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 2px 9px;
+  flex: 0 0 auto;
+}
+
 .paper-meta {
   color: var(--text-muted);
   font-size: 0.88rem;
@@ -237,6 +293,13 @@ button.paper-title:hover { color: var(--link); }
 
 .paper-plain .paper-meta,
 .paper-plain .paper-title { margin-bottom: 0; }
+
+.paper-presented {
+  color: var(--link);
+  font-size: 0.84rem;
+  font-weight: 500;
+  margin: 0 0 10px;
+}
 
 .paper-abstract {
   color: var(--text-muted);
@@ -249,6 +312,28 @@ button.paper-title:hover { color: var(--link); }
 
 .ssrn-link { white-space: nowrap; }
 
+/* ---------- Interesting Reads ---------- */
+.read-item {
+  padding: 4px 0;
+}
+
+.read-kicker {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-faint);
+  margin: 0 0 4px;
+}
+
+.read-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.read-title a { color: var(--navy); }
+.read-title a:hover { color: var(--link); }
+
 /* ---------- Simple lists (Teaching) ---------- */
 .plain-item {
   padding: 14px 0;
@@ -257,7 +342,7 @@ button.paper-title:hover { color: var(--link); }
 
 .plain-item:first-child { border-top: none; padding-top: 0; }
 
-.plain-item .title { font-weight: 600; font-size: 0.98rem; margin: 0 0 3px; }
+.plain-item .title { font-weight: 600; font-size: 0.98rem; margin: 0 0 3px; color: var(--navy); }
 .plain-item .meta { color: var(--text-muted); font-size: 0.88rem; margin: 0; }
 
 .empty-state {
@@ -270,6 +355,18 @@ button.paper-title:hover { color: var(--link); }
   .hero-top { flex-direction: column; align-items: flex-start; gap: 16px; }
 }
 
+/* ---------- Scroll-in reveal ---------- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ---------- Footer ---------- */
 .site-footer {
   margin-top: 48px;
@@ -277,3 +374,7 @@ button.paper-title:hover { color: var(--link); }
   color: var(--text-faint);
   font-size: 0.82rem;
 }
+
+.site-footer p { margin: 0 0 4px; }
+.site-footer p:last-child { margin-bottom: 0; }
+.site-footer .last-updated { font-size: 0.78rem; }
