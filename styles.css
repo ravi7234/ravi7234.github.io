@@ -154,10 +154,14 @@ a:hover { text-decoration: underline; }
 }
 
 /* ---------- Divider ---------- */
+/* the rule is the first child of the section it introduces, so it shares
+   that section's content box -- never give it its own padded wrapper, or
+   it drifts out of line with the heading and body copy underneath it */
 hr {
   border: none;
   border-top: 2px solid var(--border);
   margin: 52px 0;
+  width: auto;
 }
 
 /* ---------- Section ---------- */
@@ -275,7 +279,7 @@ button.paper-title:hover { color: var(--link); }
 .status-tag {
   display: inline-block;
   font-size: 0.65rem;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--text-muted);
