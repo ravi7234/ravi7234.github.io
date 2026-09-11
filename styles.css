@@ -181,6 +181,14 @@ hr {
   color: var(--navy);
 }
 
+/* thin rule under a section heading -- same weight and spacing as the
+   border the first .plain-item draws beneath the Teaching heading */
+.section-head.ruled {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 22px;
+  margin-bottom: 14px;
+}
+
 .section-head .count {
   color: var(--text-faint);
   font-size: 0.85rem;
